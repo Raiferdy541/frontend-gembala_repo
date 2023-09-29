@@ -23,8 +23,8 @@ export default {
     dt: {
       column: [
         {
-          name: "id_ternak",
-          th: "ID Ternak",
+          name: "rf_id",
+          th: "QR ID",
         },
         {
           th: "Bangsa",

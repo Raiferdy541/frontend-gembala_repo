@@ -36,7 +36,7 @@ export default {
     dt: {
       column: [
         {
-          name: "id_ternak",
+          name: "rf_id",
           th: "ID Indukan",
         },
         {

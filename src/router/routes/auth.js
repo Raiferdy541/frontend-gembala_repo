@@ -32,6 +32,11 @@ const authRoutes = {
       component: () => import("@/views/Auth/RegisterView.vue"),
     },
     {
+      path: "/auth/register-without-activate",
+      name: "Register Without Activate",
+      component: () => import("@/views/Auth/RegisterWithoutActivateView.vue"),
+    },
+    {
       path: "/auth/reset",
       name: "Reset Password",
       component: () => import("@/views/Auth/ResetPassword.vue"),

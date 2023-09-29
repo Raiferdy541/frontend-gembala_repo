@@ -71,16 +71,7 @@ const useAuthStore = defineStore({
         throw (error || message) ?? "Logout Gagal!";
       }
     },
-
-    async a$register(request) {
-      try {
-        await s$auth.register(request);
-        return "Register Berhasil!";
-      } catch ({ error, message }) {
-        throw (error || message) ?? "Register Gagal!";
-      }
-    },
-
+    
     async a$forgotPassword(request) {
       try {
         await s$auth.forgotPassword(request);

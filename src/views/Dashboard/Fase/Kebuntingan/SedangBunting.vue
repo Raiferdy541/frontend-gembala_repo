@@ -25,8 +25,8 @@ export default {
           render: ({ tanggal }) => ubahTanggal(tanggal),
         },
         {
-          name: "id_ternak",
-          th: "ID Ternak",
+          name: "rf_id",
+          th: "QR ID",
         },
         {
           name: "kandang",

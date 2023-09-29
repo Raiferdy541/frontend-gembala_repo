@@ -254,16 +254,16 @@ export default {
           <div v-else>
             <form-comp v-if="modal.createAdaptasi">
               <div class="row">
-                <!-- id_ternak -->
+                <!-- rf_id -->
                 <div class="col-12">
-                  <base-input name="kandang" label="ID Ternak">
+                  <base-input name="kandang" label="QR ID">
                     <multi-select
                       @select="onChange"
-                      v-model="input.id_ternak"
+                      v-model="input.rf_id"
                       :options="g$ddListAdaptasiHari2"
-                      label="id_ternak"
-                      track-by="id_ternak"
-                      placeholder="Pilih ID Ternak"
+                      label="rf_id"
+                      track-by="rf_id"
+                      placeholder="Pilih QR ID"
                       :show-labels="false"
                     />
                   </base-input>

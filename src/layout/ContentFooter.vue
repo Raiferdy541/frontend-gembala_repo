@@ -8,7 +8,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col">
         <div class="copyright text-center text-muted">
-          {{ year }} &mdash; <strong>{{ siteMeta.title }}</strong>
+          {{ currentYear }} &mdash; <strong>{{ siteMeta.title }}</strong>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      year: 2022,
+      currentYear: new Date().getFullYear(),
     };
   },
 };

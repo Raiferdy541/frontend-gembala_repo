@@ -12,21 +12,29 @@ import {
 
 export default {
   metaInfo: () => ({
-    title: "Pendaftaran",
+    title: "Pendaftaran Tanpa Aktivasi",
   }),
   setup() {
-    const router = useRouter();
     const superadmin = d$superadmin();
     const notify = inject("notify");
+    
 
     async function onSubmit(values) {
       try {
-        const register = await superadmin.a$register(values);
-        if (register === "Register Berhasil!") {
-          notify(register);
-          router.push({ name: "Cek Email" });
+        const registerWithoutActivate = await superadmin.a$registerWithoutActivate(values);
+        if (registerWithoutActivate === "Register Berhasil!") {
+          values.nama_pengguna = '';
+          values.email = '';
+          values.nomor_telepon = '';
+          values.nama_peternakan = '';
+          values.alamat = '';
+          values.postcode = '';
+          values.kata_sandi = '';
+          values.ulangi_kata_sandi = '';
+  
+          notify(registerWithoutActivate);
         } else {
-          throw new Error(register);
+          throw new Error(registerWithoutActivate);
         }
       } catch (error) {
         notify(error, false);
@@ -179,7 +187,6 @@ export default {
                   type="success1"
                   class="my-2 btn-lg px-6 rounded-lg text-white"
                   native-type="submit"
-                  
                 >
                   Buat Akun
                 </base-button>

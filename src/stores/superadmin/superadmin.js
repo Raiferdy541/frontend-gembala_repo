@@ -56,7 +56,52 @@ const u$superadmin = defineStore({
         throw error;
       }
     },
+    
+    async a$editPeternakan(request) {
+      try {
+        await s$superadmin.editPeternakan(request);
+      } catch ({ error }) {
+        throw error;
+      }
+    },
+
+    async a$editAdmin(request) {
+      try {
+        await s$superadmin.editAdmin(request);
+      } catch ({ error }) {
+        throw error;
+      }
+    },
+
+    async a$delAdmin(request) {
+      try {
+        await s$superadmin.delAdmin(request);
+      } catch ({ error }) {
+        throw error;
+      }
+    },
+
+    async a$register(request) {
+      try {
+        await s$superadmin.register(request);
+        return "Register Berhasil!";
+      } catch ({ error, message }) {
+        throw (error || message) ?? "Register Gagal!";
+      }
+    },
+
+    async a$registerWithoutActivate(request) {
+      try {
+        await s$superadmin.registerWithoutActivate(request);
+        return "Register Berhasil!";
+      } catch ({ error, message }) {
+        throw (error || message) ?? "Register Gagal!";
+      }
+    },
+    
   },
+
+  
   getters: {
     g$users: (state) => state.users,
     g$peternakan: (state) => state.peternakan,

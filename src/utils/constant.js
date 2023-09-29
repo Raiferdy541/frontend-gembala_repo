@@ -1,6 +1,6 @@
 // const host = import.meta.env.VITE_BASE_API_URL;
-// const host = "http://localhost:51009";
-const host = "http://be.gembala.sembadafarm.com";
+const host = "http://localhost:51009";
+// const host = "http://be.gembala.sembadafarm.com";
 
 const baseApiUrl = `${host}/`;
 

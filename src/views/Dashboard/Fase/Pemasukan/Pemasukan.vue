@@ -32,13 +32,13 @@ export default {
     // DataTable
     dt: {
       column: [
+        // {
+        //   th: "Tanggal",
+        //   render: ({ ternak }) => ubahTanggal(ternak.tanggal_masuk),
+        // },
         {
-          th: "Tanggal",
-          render: ({ ternak }) => ubahTanggal(ternak.tanggal_masuk),
-        },
-        {
-          name: "id_ternak",
-          th: "ID Ternak",
+          name: "rf_id",
+          th: "QR ID",
         },
         {
           name: "cek_poel",
@@ -245,19 +245,19 @@ export default {
       <modal-comp v-model:show="modal.detailPemasukan" modal-classes="modal-md">
         <template #header>
           <h3 class="modal-title">
-            Detail {{ pageTitle }} Nomor {{ infoPemasukan.id_ternak }}
+            Detail {{ pageTitle }} Nomor {{ infoPemasukan.rf_id }}
           </h3>
         </template>
         <template v-if="modal.detailPemasukan" #body>
           <div style="max-height: 450px; overflow-y: auto; overflow-x: hidden">
             <div class="row">
               <div class="col-5">
-                <span style="font-weight: 600">ID Ternak</span>
+                <span style="font-weight: 600">QR ID</span>
               </div>
               <div class="col">
                 :
                 <span style="font-weight: 300">
-                  {{ infoPemasukan.id_ternak }}</span
+                  {{ infoPemasukan.rf_id }}</span
                 >
               </div>
             </div>
@@ -400,13 +400,13 @@ export default {
               <div class="row">
                 <!-- ID Ternak -->
                 <div class="col-6">
-                  <base-input name="id_ternak" label="ID Ternak" required>
+                  <base-input name="rf_id" label="QR ID" required>
                     <multi-select
                       v-model="input.ternakBaru"
                       :options="g$ternakBaru"
-                      track-by="id_ternak"
-                      label="id_ternak"
-                      placeholder="Pilih ID Ternak"
+                      track-by="rf_id"
+                      label="rf_id"
+                      placeholder="Pilih QR ID"
                       :show-labels="false"
                     />
                   </base-input>

@@ -55,7 +55,11 @@ export default {
           <div class="col-md-8 px-5">
             <h1 class="text-black">Selamat Datang di {{ siteMeta.title }}!</h1>
             <br />
-            <img style="width: 100px" src="../../../public/images/logo.png" alt="" />
+            <img
+              style="width: 100px"
+              src="../../../public/images/logo.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -70,32 +74,36 @@ export default {
               <small>Silahkan Masukan Email dan Password</small>
             </div>
             <form-comp :validation-schema="schema" @submit="onSubmit">
-              <base-input name="email" addon-left-icon="fas fa-envelope" placeholder="Email">
+              <base-input
+                name="email"
+                addon-left-icon="fas fa-envelope"
+                placeholder="Email"
+              >
               </base-input>
 
-              <base-input name="kata_sandi" addon-left-icon="fas fa-lock" type="password" placeholder="Kata Sandi"
-                password>
+              <base-input
+                name="kata_sandi"
+                addon-left-icon="fas fa-lock"
+                type="password"
+                placeholder="Kata Sandi"
+                password
+              >
               </base-input>
 
               <div class="text-center">
-                <base-button type="success1" native-type="submit" class="my-2 btn-lg px-6 rounded-lg text-white">
+                <base-button
+                  type="success1"
+                  native-type="submit"
+                  class="my-2 btn-lg px-6 rounded-lg text-white"
+                >
                   Masuk
                 </base-button>
               </div>
               <div class="text-center mt-4">
                 <div>
-                <span class="text-muted"
-                  ><small>Belum Punya Akun? </small></span
-                >
-                <router-link to="/auth/register" class="text-primary">
-                  <small>Daftar Disini</small>
-                </router-link>
-                </div>
-
-                <div>
-                <router-link to="/auth/reset" class="text-primary">
-                  <small>Lupa Password?</small>
-                </router-link>
+                  <router-link to="/auth/reset" class="text-primary">
+                    <small>Lupa Password?</small>
+                  </router-link>
                 </div>
               </div>
             </form-comp>

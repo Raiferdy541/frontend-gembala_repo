@@ -51,6 +51,15 @@ export default {
 .bg-success {
   background-color: #006329 !important;
 }
+.btn-register {
+  background-color: #0074cc !important;
+}
+.btn-register-without-activate {
+  background-color: #0074cc !important;
+}
+.btn-exit {
+  background-color: #ff0000 !important;
+}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
